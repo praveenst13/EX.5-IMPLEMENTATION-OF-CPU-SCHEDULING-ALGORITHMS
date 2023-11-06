@@ -7,7 +7,7 @@ To implement First-Come-First-Serve (FCFS) Scheduling
 Start the process Accept the number of processes in the ready queue For each process in the ready queue, do the following: Accept the process ID and burst time Calculate the waiting time for the current process Calculate the turnaround time for the current process Display the process ID, burst time, waiting time and turnaround time for the current process Calculate the average waiting time and average turnaround time Stop the process.
 
 ## PROGRAM:
-```c
+```py
 # Get the number of processes from the user
 n = int(input("Enter number of processes: "))
 
@@ -68,7 +68,7 @@ To implement Shortest Job First (SJF) Preemptive Scheduling
 Start the process Accept the number of processes in the ready queue For each process in the ready queue, do the following: Accept the process ID and burst time Calculate the waiting time for the current process Calculate the turnaround time for the current process Display the process ID, burst time, waiting time and turnaround time for the current process Calculate the average waiting time and average turnaround time Stop the process
 
 ## PROGRAM:
-```c
+```py
 n = int(input("Enter the number of processes: "))
 
 burst_time = []
@@ -131,7 +131,7 @@ To implement Shortest Job First (SJF) Non-Preemptive Scheduling
 Shortest Job First (SJF) Non-Preemptive Scheduling is a scheduling algorithm that aims to minimize the average waiting time of processes in a CPU scheduling environment. It selects the process with the shortest burst time to execute first. The algorithm operates in a non-preemptive manner, meaning that once a process starts executing, it continues until it completes its entire burst time. To implement SJF, you first determine the burst time for each process and then sort the processes in ascending order of their burst times. The process with the shortest burst time is scheduled to run next. This process continues until all processes have been executed. SJF non-preemptive scheduling is effective in minimizing waiting times for shorter tasks but can lead to longer waiting times for longer tasks if they arrive early in the queue.
 
 ## PROGRAM:
-```c
+```py
 def sjf_non_preemptive(processes, burst_time):
     n = len(processes)
 
@@ -192,7 +192,7 @@ To implement Round Robin (RR) Scheduling
 Start the process Get the number of elements to be inserted Get the value for burst time for individual processes Get the value for time quantum Make the CPU scheduler go around the ready queue allocating CPU to each process for the time interval specified Make the CPU scheduler pick the first process and set time to interrupt after quantum. And after it's expiry dispatch the process If the process has burst time less than the time quantum then the process is released by the CPU If the process has burst time greater than time quantum then it is interrupted by the OS and the process is put to the tail of ready queue and the schedule selects next process from head of the queue Calculate the total and average waiting time and turnaround time Display the results
 
 ## PROGRAM:
-```c
+```py
 from collections import deque
 
 def round_robin(processes, burst_time, quantum):
@@ -269,7 +269,7 @@ To implement Priority Preemptive Scheduling
 4.Compute the average waiting time and average turnaround time. 5.Display the results, including process details and averages
 
 ## PROGRAM:
-```c
+```py
 def priority_preemptive(processes, burst_time, priorities):
     n = len(processes)
     remaining_time = list(burst_time)  # Initialize remaining time for each process
